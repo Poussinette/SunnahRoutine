@@ -1,5 +1,7 @@
 # Sunnah Daily Coach
 
+**Live app:** [https://poussinette.github.io/SunnahRoutine/](https://poussinette.github.io/SunnahRoutine/)
+
 A web app that coaches you through the day by following the Sunnah of Prophet Muhammad ﷺ, based exclusively on authentic (sahih/hasan) hadith narrations.
 
 ## Features
@@ -13,8 +15,10 @@ A web app that coaches you through the day by following the Sunnah of Prophet Mu
 
 ## Getting Started
 
+Visit the live app at [https://poussinette.github.io/SunnahRoutine/](https://poussinette.github.io/SunnahRoutine/), or run it locally:
+
 ```
-git clone <repo-url>
+git clone https://github.com/Poussinette/SunnahRoutine.git
 cd SunnahRoutine
 # Open index.html in your browser
 ```
