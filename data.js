@@ -83,6 +83,35 @@ const SUNNAH_DATA = {
       benefit: "\"Whoever performs wudu as I have performed it, then prays two rak'ahs… his previous sins will be forgiven.\" [Bukhari 159]"
     },
     {
+      id: "dressing_sunnah",
+      title: "Sunnah of Getting Dressed",
+      arabicTitle: "آداب اللباس",
+      timeLabel: "When getting dressed",
+      timeSlot: 5,
+      category: "hygiene",
+      icon: "🧥",
+      shortDesc: "The Prophet ﷺ wore clean white garments and had a precise, mindful routine for putting on clothes and shoes — transforming every morning into an act of worship.",
+      steps: [
+        "Say Bismillah before putting on any garment.",
+        "Start with the RIGHT side — right arm/leg first when dressing.",
+        "Recite the du'a below when wearing each garment.",
+        "For a new garment, add: \"Allāhumma laka al-ḥamd, anta kasawtanīh…\" (see benefit).",
+        "Keep garments above the ankle — wearing them below is forbidden for men.",
+        "When putting on shoes: RIGHT foot first.",
+        "When removing shoes: LEFT foot first — so the right is first on and last off.",
+        "Prefer white clothes — they were the most beloved garments to the Prophet ﷺ."
+      ],
+      dua: {
+        arabic: "الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ",
+        transliteration: "Al-ḥamdu lillāhi alladhī kasānī hādhā wa-razaqanīhi min ghayri ḥawlin minnī wa-lā quwwah",
+        translation: "Praise be to Allah Who clothed me with this and provided it for me without any power or strength from myself."
+      },
+      hadith: "\"When you put on your sandals, start with the right foot; and when you take them off, start with the left foot, so that the right is the first to be shod and the last to be unshod.\"",
+      source: "Sahih al-Bukhari 5856; Sahih Muslim 2097; Sunan Abi Dawud 4023; Tirmidhi 3458",
+      sourceUrl: "https://sunnah.com/bukhari:5856",
+      benefit: "\"Whoever puts on a garment and says this du'a, his past and future sins will be forgiven.\" [Abu Dawud 4023; Tirmidhi 3458 — hasan] — For a new garment say: اللَّهُمَّ لَكَ الْحَمْدُ أَنْتَ كَسَوْتَنِيهِ، أَسْأَلُكَ مِنْ خَيْرِهِ وَخَيْرِ مَا صُنِعَ لَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّهِ وَشَرِّ مَا صُنِعَ لَهُ — \"O Allah, praise be to You — You have clothed me with it. I ask You for its good and the good of what it was made for, and I seek refuge in You from its evil.\" [Abu Dawud 4020; hasan] — The Prophet ﷺ typically wore a white qamis (long shirt), izar (lower wrap), and rida (outer shawl). He said: \"Wear white garments, for they are the best of your garments.\" [Abu Dawud 4061; Tirmidhi 1784 — sahih]"
+    },
+    {
       id: "fajr_sunnah",
       title: "Two Rak'ahs Before Fajr",
       arabicTitle: "سنة الفجر",
