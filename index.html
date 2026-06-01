@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunnah Daily Coach</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-inner">
+        <div class="header-brand">
+          <span class="brand-icon">☽</span>
+          <h1 class="brand-name">Sunnah Daily Coach</h1>
+        </div>
+        <div class="header-time">
+          <span id="live-time"></span>
+          <span id="live-date"></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero / Active Practice Banner -->
+    <section class="hero-banner" id="hero-banner">
+      <div class="hero-inner">
+        <p class="hero-label">Now is time for</p>
+        <h2 class="hero-practice" id="hero-practice-name">Loading…</h2>
+        <p class="hero-sub" id="hero-practice-sub"></p>
+        <button class="btn-primary" id="hero-cta" onclick="app.openCurrentPractice()">Open Practice</button>
+      </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <nav class="tab-nav">
+      <button class="tab-btn active" data-tab="today">Today</button>
+      <button class="tab-btn" data-tab="adhkar">Adhkar</button>
+      <button class="tab-btn" data-tab="explore">All Sunnah</button>
+      <button class="tab-btn" data-tab="about">About</button>
+    </nav>
+
+    <!-- Tab: Today -->
+    <section class="tab-content active" id="tab-today">
+      <div class="section-header">
+        <h2>Your Daily Sunnah Roadmap</h2>
+        <p>Practices ordered from Fajr to sleep — check off each one as you complete it.</p>
+      </div>
+      <div class="timeline" id="daily-timeline"></div>
+    </section>
+
+    <!-- Tab: Adhkar -->
+    <section class="tab-content" id="tab-adhkar">
+      <div class="section-header">
+        <h2>Morning & Evening Adhkar</h2>
+        <p>Recite these remembrances at the prescribed times for full reward.</p>
+      </div>
+      <div class="adhkar-tabs">
+        <button class="adhkar-tab-btn active" data-adhkar="morning">Morning أذكار الصباح</button>
+        <button class="adhkar-tab-btn" data-adhkar="evening">Evening أذكار المساء</button>
+        <button class="adhkar-tab-btn" data-adhkar="sleep">Before Sleep أذكار النوم</button>
+      </div>
+      <div id="adhkar-list"></div>
+    </section>
+
+    <!-- Tab: Explore -->
+    <section class="tab-content" id="tab-explore">
+      <div class="section-header">
+        <h2>All Sunnah Practices</h2>
+        <p>Browse every practice by category.</p>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-cat="all">All</button>
+        <button class="filter-btn" data-cat="prayer">Prayer</button>
+        <button class="filter-btn" data-cat="eating">Eating</button>
+        <button class="filter-btn" data-cat="hygiene">Hygiene</button>
+        <button class="filter-btn" data-cat="social">Social</button>
+        <button class="filter-btn" data-cat="sleep">Sleep</button>
+        <button class="filter-btn" data-cat="quran">Qur'an</button>
+      </div>
+      <div id="explore-grid"></div>
+    </section>
+
+    <!-- Tab: About -->
+    <section class="tab-content" id="tab-about">
+      <div class="about-content">
+        <h2>About This App</h2>
+        <p>Sunnah Daily Coach guides you through the prophetic lifestyle of Muhammad ﷺ, based exclusively on <strong>authentic (sahih/hasan) narrations</strong> from the major hadith collections:</p>
+        <ul>
+          <li><strong>Sahih al-Bukhari</strong> — compiled by Imam Muhammad ibn Ismail al-Bukhari (d. 256 AH)</li>
+          <li><strong>Sahih Muslim</strong> — compiled by Imam Muslim ibn al-Hajjaj (d. 261 AH)</li>
+          <li><strong>Sunan Abi Dawud</strong> — compiled by Imam Abu Dawud al-Sijistani (d. 275 AH)</li>
+          <li><strong>Jami' al-Tirmidhi</strong> — compiled by Imam al-Tirmidhi (d. 279 AH)</li>
+          <li><strong>Sunan al-Nasa'i</strong> — compiled by Imam al-Nasa'i (d. 303 AH)</li>
+          <li><strong>Sunan Ibn Majah</strong> — compiled by Imam Ibn Majah (d. 273 AH)</li>
+          <li><strong>Musnad Ahmad</strong> — compiled by Imam Ahmad ibn Hanbal (d. 241 AH)</li>
+          <li><strong>Riyad al-Salihin</strong> — compiled by Imam al-Nawawi (d. 676 AH)</li>
+          <li><strong>Hisnul Muslim</strong> (Fortress of the Muslim) — compiled by Sa'id al-Qahtani</li>
+        </ul>
+        <p>Each practice card displays its source reference so you can verify it yourself.</p>
+        <hr />
+        <h3>Disclaimer</h3>
+        <p>This app is a reminder tool, not a fatwa or religious authority. For rulings and detailed fiqh, consult qualified scholars. The app does not calculate prayer times (use a dedicated prayer-time app for your location).</p>
+        <hr />
+        <h3>صلى الله عليه وسلم</h3>
+        <p class="arabic-quote">قُلْ إِن كُنتُمْ تُحِبُّونَ اللَّهَ فَاتَّبِعُونِي يُحْبِبْكُمُ اللَّهُ</p>
+        <p><em>"Say: If you love Allah, follow me — Allah will love you."</em> [Qur'an 3:31]</p>
+      </div>
+    </section>
+
+    <!-- Practice Modal -->
+    <div class="modal-overlay" id="modal-overlay" onclick="app.closeModal()">
+      <div class="modal-card" id="modal-card" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="app.closeModal()">✕</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
